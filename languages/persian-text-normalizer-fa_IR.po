@@ -1,0 +1,152 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Persian Text Normalizer 1.0.0\n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Domain: persian-text-normalizer\n"
+
+msgid "Applies the settings above to every published post, page, product and term already on the site. Slugs, modification dates and revisions are left alone."
+msgstr "تنظیمات بالا را روی همهٔ نوشته‌ها، برگه‌ها، محصولات و دسته‌های موجود در سایت اعمال می‌کند. نامک‌ها، تاریخ ویرایش و رونوشت‌ها دست نمی‌خورند."
+
+msgid "Arabic digits ٠١٢ → Persian ۰۱۲"
+msgstr "ارقام عربی ٠١٢ ← فارسی ۰۱۲"
+
+msgid "Categories, tags & attributes"
+msgstr "دسته‌ها، برچسب‌ها و ویژگی‌ها"
+
+msgid "Clean up ZWNJ (نیم‌فاصله)"
+msgstr "مرتب‌سازی نیم‌فاصله‌ها"
+
+msgid "Converts ۰۹۱۲… to 0912… in phone, mobile, postcode and national-ID fields of WooCommerce (classic & block checkout), Contact Form 7, Gravity Forms and other forms — so validation, SMS gateways and payment gateways stop failing."
+msgstr "عدد ۰۹۱۲… را در فیلدهای تلفن، موبایل، کد پستی و کد ملی ووکامرس (تسویه‌حساب کلاسیک و بلوکی)، Contact Form 7، Gravity Forms و فرم‌های دیگر به 0912… تبدیل می‌کند تا اعتبارسنجی، پنل پیامک و درگاه پرداخت خطا ندهند."
+
+msgid "Digits in forms"
+msgstr "ارقام در فرم‌ها"
+
+#, php-format
+msgid "Done: %1$d posts and %2$d terms were normalized."
+msgstr "انجام شد: %1$d نوشته و %2$d دسته یکسان‌سازی شدند."
+
+msgid "Edit"
+msgstr "ویرایش"
+
+msgid "Everything is already clean."
+msgstr "همه‌چیز از قبل مرتب است."
+
+msgid "Fix everything"
+msgstr "اصلاح همه"
+
+msgid "Fix existing content"
+msgstr "اصلاح محتوای موجود"
+
+msgid "Fixes Arabic «ي/ك», mixed digits and broken ZWNJs across posts, products, search, slugs and checkout forms — better search results, working phone validation and no duplicate URLs on Persian WordPress & WooCommerce sites."
+msgstr "«ي/ك» عربی، ارقام درهم و نیم‌فاصله‌های خراب را در نوشته‌ها، محصولات، جستجو، نامک‌ها و فرم‌های تسویه‌حساب اصلاح می‌کند؛ جستجوی بهتر، اعتبارسنجی درست شماره تلفن و بدون نشانی تکراری برای سایت‌های فارسی وردپرس و ووکامرس."
+
+msgid "Fixes the Arabic «ي/ك», mixed digits and broken ZWNJs that split your search results, break checkout validation and create duplicate URLs."
+msgstr "«ي/ك» عربی، ارقام درهم و نیم‌فاصله‌های خراب را اصلاح می‌کند؛ همان‌هایی که نتایج جستجو را ناقص می‌کنند، اعتبارسنجی تسویه‌حساب را خراب می‌کنند و نشانی‌های تکراری می‌سازند."
+
+msgid "Fixing…"
+msgstr "در حال اصلاح…"
+
+msgid "Latin digits are never touched."
+msgstr "ارقام انگلیسی هرگز تغییر نمی‌کنند."
+
+msgid "Latin digits in number fields"
+msgstr "ارقام انگلیسی در فیلدهای عددی"
+
+msgid "Need to keep a passage untouched (e.g. a Quranic verse)? Wrap it in <code>[ptn_ignore]…[/ptn_ignore]</code> or <code>&lt;!-- ptn:ignore --&gt;…&lt;!-- /ptn:ignore --&gt;</code>. WP-CLI: <code>wp ptn fix --dry-run</code>"
+msgstr "می‌خواهید بخشی (مثلاً آیهٔ قرآن) دست نخورد؟ آن را داخل <code>[ptn_ignore]…[/ptn_ignore]</code> یا <code>&lt;!-- ptn:ignore --&gt;…&lt;!-- /ptn:ignore --&gt;</code> بگذارید. WP-CLI: <code>wp ptn fix --dry-run</code>"
+
+msgid "New URL slugs"
+msgstr "نامک‌های جدید"
+
+msgid "New comments & reviews"
+msgstr "دیدگاه‌ها و نقدهای جدید"
+
+msgid "Off by default. Search always ignores diacritics."
+msgstr "پیش‌فرض خاموش. جستجو همیشه اعراب را نادیده می‌گیرد."
+
+msgid "Off by default: some loanwords are intentionally written with ة."
+msgstr "پیش‌فرض خاموش: برخی واژه‌های قرضی عمداً با ة نوشته می‌شوند."
+
+msgid "Paste some text…"
+msgstr "متنی را اینجا بچسبانید…"
+
+msgid "Persian Normalizer"
+msgstr "یکسان‌ساز فارسی"
+
+msgid "Persian Text Normalizer"
+msgstr "یکسان‌ساز متن فارسی"
+
+msgid "Posts, pages & products on save"
+msgstr "نوشته‌ها، برگه‌ها و محصولات هنگام ذخیره"
+
+msgid "Prevents duplicate URLs that differ only in ي/ی. Existing slugs are never changed."
+msgstr "از نشانی‌های تکراری که فقط در ي/ی فرق دارند جلوگیری می‌کند. نامک‌های موجود هرگز تغییر نمی‌کنند."
+
+msgid "Remove diacritics (اِعراب) from stored text"
+msgstr "حذف اعراب از متن ذخیره‌شده"
+
+msgid "Remove kashida (ـ) from stored text"
+msgstr "حذف کشیده (ـ) از متن ذخیره‌شده"
+
+msgid "Removes repeated ZWNJs and ZWNJs next to spaces, punctuation or digits."
+msgstr "نیم‌فاصله‌های تکراری و نیم‌فاصلهٔ کنار فاصله، علائم نگارشی یا عدد را حذف می‌کند."
+
+msgid "Request failed. Please reload the page and try again."
+msgstr "درخواست ناموفق بود. صفحه را تازه کنید و دوباره امتحان کنید."
+
+msgid "Scan (dry run)"
+msgstr "بررسی (بدون تغییر)"
+
+#, php-format
+msgid "Scan finished: %1$d of %2$d posts and %3$d terms need fixing. Nothing was changed."
+msgstr "بررسی تمام شد: %1$d از %2$d نوشته و %3$d دسته نیاز به اصلاح دارند. هنوز چیزی تغییر نکرده است."
+
+msgid "Scanning…"
+msgstr "در حال بررسی…"
+
+msgid "Search queries"
+msgstr "عبارت‌های جستجو"
+
+msgid "Searched as"
+msgstr "جستجو به‌صورت"
+
+msgid "Settings"
+msgstr "تنظیمات"
+
+msgid "Site and WooCommerce product search: Arabic letters, diacritics and kashida are normalized and ZWNJ is treated as a space, so «مي‌خواهم» finds «می‌خواهم»."
+msgstr "جستجوی سایت و محصولات ووکامرس: حروف عربی، اعراب و کشیده یکسان می‌شوند و نیم‌فاصله مثل فاصله در نظر گرفته می‌شود؛ پس «مي‌خواهم» هم «می‌خواهم» را پیدا می‌کند."
+
+msgid "Stored as"
+msgstr "ذخیره به‌صورت"
+
+msgid "This rewrites existing content directly in the database. Take a backup first. Continue?"
+msgstr "این کار محتوای موجود را مستقیماً در پایگاه داده بازنویسی می‌کند. اول پشتیبان بگیرید. ادامه می‌دهید؟"
+
+msgid "Title, content and excerpt. HTML tags, block markup, <code>/<pre> and ignored regions stay untouched."
+msgstr "عنوان، محتوا و چکیده. تگ‌های HTML، نشانه‌گذاری بلوک‌ها، <code>/<pre> و بخش‌های مستثنا دست نمی‌خورند."
+
+msgid "Try it"
+msgstr "امتحان کنید"
+
+msgid "What to normalize"
+msgstr "چه چیزی یکسان شود"
+
+msgid "Where to normalize"
+msgstr "کجا یکسان شود"
+
+msgid "content"
+msgstr "محتوا"
+
+msgid "excerpt"
+msgstr "چکیده"
+
+msgid "title"
+msgstr "عنوان"
+
+msgid "ة → ه"
+msgstr "ة ← ه"

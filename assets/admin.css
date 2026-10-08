@@ -1,0 +1,16 @@
+.ptn-wrap .ptn-lead { font-size: 14px; max-width: 760px; color: #50575e; }
+.ptn-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 20px; margin-top: 16px; align-items: start; }
+.ptn-side { display: grid; gap: 20px; }
+.ptn-card { background: #fff; border: 1px solid #dcdcde; border-radius: 8px; padding: 4px 20px 16px; }
+.ptn-card h2 { font-size: 15px; margin: 18px 0 10px; }
+.ptn-toggle { display: flex; gap: 10px; align-items: flex-start; padding: 9px 0; border-top: 1px solid #f0f0f1; cursor: pointer; }
+.ptn-toggle input { margin-top: 2px; }
+.ptn-toggle-text { display: grid; gap: 3px; }
+.ptn-toggle small { color: #646970; line-height: 1.6; }
+#ptn-try { width: 100%; font-size: 15px; line-height: 1.8; }
+.ptn-out-label { margin: 12px 0 4px; font-size: 12px; color: #646970; text-transform: uppercase; letter-spacing: .03em; }
+.ptn-out { min-height: 1.8em; padding: 8px 10px; background: #f6f7f7; border-radius: 6px; font-size: 15px; line-height: 1.8; word-break: break-word; }
+.ptn-out mark { background: #f0c33c; color: #000; border-radius: 2px; padding: 0 1px; }
+#ptn-progress { width: 100%; height: 10px; }
+#ptn-samples { margin: 8px 0 0; padding-inline-start: 18px; list-style: disc; color: #50575e; }
+@media (max-width: 960px) { .ptn-grid { grid-template-columns: 1fr; } }
