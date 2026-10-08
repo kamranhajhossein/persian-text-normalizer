@@ -32,6 +32,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Read version
         id: v
         run: echo "version=$(grep -m1 -oP '^\s*\*\s*Version:\s*\K[0-9.]+' persian-text-normalizer.php)" >> "$GITHUB_OUTPUT"
@@ -41,7 +43,12 @@ jobs:
           V: ${{ steps.v.outputs.version }}
         run: |
           if gh release view "v$V" >/dev/null 2>&1; then
-            echo "v$V already released"; exit 0
+            # Rebuild the release if its tag points outside main (e.g. after a history rewrite).
+            if git merge-base --is-ancestor "v$V" HEAD 2>/dev/null; then
+              echo "v$V already released"; exit 0
+            fi
+            gh release delete "v$V" --cleanup-tag --yes
+            git tag -d "v$V" 2>/dev/null || true
           fi
           mkdir -p build
           git archive --format=zip --prefix=persian-text-normalizer/ -o build/persian-text-normalizer.zip HEAD
