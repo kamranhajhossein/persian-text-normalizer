@@ -3,7 +3,6 @@ name: CI
 on:
   push:
     branches: [main]
-    tags: ['v*']
   pull_request:
 
 jobs:
@@ -23,19 +22,29 @@ jobs:
       - name: Unit tests
         run: php tests/run-tests.php
 
+  # Publishes a GitHub Release (with the installable zip) whenever the plugin header
+  # version on main has no release yet. Bump "Version:" to ship a new one.
   release:
-    if: startsWith(github.ref, 'refs/tags/v')
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: test
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: Build plugin zip
+      - name: Read version
+        id: v
+        run: echo "version=$(grep -m1 -oP '^\s*\*\s*Version:\s*\K[0-9.]+' persian-text-normalizer.php)" >> "$GITHUB_OUTPUT"
+      - name: Build zip and release if new
+        env:
+          GH_TOKEN: ${{ github.token }}
+          V: ${{ steps.v.outputs.version }}
         run: |
+          if gh release view "v$V" >/dev/null 2>&1; then
+            echo "v$V already released"; exit 0
+          fi
           mkdir -p build
           git archive --format=zip --prefix=persian-text-normalizer/ -o build/persian-text-normalizer.zip HEAD
-      - uses: softprops/action-gh-release@v2
-        with:
-          files: build/persian-text-normalizer.zip
-          generate_release_notes: true
+          awk -v v="$V" '$0 ~ "^## "v {f=1; next} /^## / {f=0} f' CHANGELOG.md > build/notes.md
+          gh release create "v$V" build/persian-text-normalizer.zip \
+            --target "$GITHUB_SHA" --title "v$V" --notes-file build/notes.md --latest
